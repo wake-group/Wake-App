@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
+        primaryColor: Colors.black,
         fontFamily: 'Libre_Franklin',
       ),
       home: const Welcome(),

@@ -17,6 +17,7 @@ class _NavigationState extends State<Navigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: page[initialIndex],
+      bottomNavigationBar: buildMyNavBar(context),
     );
   }
 
@@ -42,12 +43,12 @@ class _NavigationState extends State<Navigation> {
             },
             icon: initialIndex == 0
                 ? const Icon(
-                    Icons.home_filled,
+                    Icons.alarm_on_rounded,
                     color: Colors.white,
                     size: 35,
                   )
                 : const Icon(
-                    Icons.home_outlined,
+                    Icons.alarm_on_outlined,
                     color: Colors.white,
                     size: 35,
                   ),
@@ -61,12 +62,12 @@ class _NavigationState extends State<Navigation> {
             },
             icon: initialIndex == 1
                 ? const Icon(
-                    Icons.work_rounded,
+                    Icons.check_circle,
                     color: Colors.white,
                     size: 35,
                   )
                 : const Icon(
-                    Icons.work_outline_outlined,
+                    Icons.check_circle_outline,
                     color: Colors.white,
                     size: 35,
                   ),
@@ -86,25 +87,6 @@ class _NavigationState extends State<Navigation> {
                   )
                 : const Icon(
                     Icons.widgets_outlined,
-                    color: Colors.white,
-                    size: 35,
-                  ),
-          ),
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                initialIndex = 3;
-              });
-            },
-            icon: initialIndex == 3
-                ? const Icon(
-                    Icons.person,
-                    color: Colors.white,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.person_outline,
                     color: Colors.white,
                     size: 35,
                   ),
