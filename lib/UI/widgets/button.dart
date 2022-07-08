@@ -15,12 +15,13 @@ Widget button(String? text, Function()? onPressed) {
           child: Container(
             width: 300,
             decoration: const BoxDecoration(
-                gradient: const LinearGradient(
-              colors: [
-                Color.fromARGB(255, 148, 231, 225),
-                Color.fromARGB(255, 62, 182, 226)
-              ],
-            )),
+                borderRadius: BorderRadius.all(Radius.circular(15.00)),
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 148, 231, 225),
+                    Color.fromARGB(255, 62, 182, 226)
+                  ],
+                )),
             padding: const EdgeInsets.all(10.0),
             child: Text(
               text!,
@@ -30,4 +31,26 @@ Widget button(String? text, Function()? onPressed) {
         )
       // color: const Color(0xff8B7CA2))
       : CupertinoButton(child: Text(text!), onPressed: onPressed);
+}
+
+Widget mybutton(String? text, Function()? onPressed, double? height) {
+  return GestureDetector(
+    onTap: onPressed,
+    child: ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(15.00)),
+      child: Container(
+        width: height!,
+        height: 40,
+        decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(15.00)),
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 148, 231, 225),
+                Color.fromARGB(255, 62, 182, 226)
+              ],
+            )),
+        child: Center(child: Text(text!)),
+      ),
+    ),
+  );
 }

@@ -1,5 +1,10 @@
 {
 "welcome":"configurar alarma y \n Despertar fácilmente",
 
-"start":"¡Hola a todos! \n agreguemos una alarma"
+"start":"¡Hola! \n agreguemos una alarma",
+
+"movements": {
+    "next":"",
+    "add":""
+}
 }
