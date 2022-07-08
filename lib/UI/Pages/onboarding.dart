@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:wake/UI/Pages/navigationbar.dart';
 import 'package:wake/UI/widgets/widgets.dart';
 import 'package:wake/translations/locale_keys.g.dart';
 
@@ -55,7 +56,10 @@ class Welcome extends StatelessWidget {
           Positioned(
               top: size.height * .9,
               left: size.width * .12,
-              child: button("next", () {}))
+              child: button("next", () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const Navigation()));
+              }))
         ],
       ),
     );
