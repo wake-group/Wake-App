@@ -10,9 +10,8 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
   int initialIndex = 0;
-  bool anyalarm = false;
 
-  final page = [const Home()];
+  final page = [const Home(), const Home(), const Home()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,62 +33,89 @@ class _NavigationState extends State<Navigation> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                initialIndex = 0;
-              });
-            },
-            icon: initialIndex == 0
-                ? const Icon(
-                    Icons.alarm_on_rounded,
-                    color: Colors.white,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.alarm_on_outlined,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+          ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(15.00)),
+            child: Container(
+              width: initialIndex == 0
+                  ? MediaQuery.of(context).size.width * .3
+                  : null,
+              color: initialIndex == 0 ? Colors.white : Colors.transparent,
+              child: IconButton(
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    initialIndex = 0;
+                  });
+                },
+                icon: initialIndex == 0
+                    ? const Icon(
+                        Icons.alarm_outlined,
+                        color: Colors.black,
+                        size: 35,
+                      )
+                    : const Icon(
+                        Icons.alarm_outlined,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+              ),
+            ),
           ),
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                initialIndex = 1;
-              });
-            },
-            icon: initialIndex == 1
-                ? const Icon(
-                    Icons.check_circle,
-                    color: Colors.white,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.check_circle_outline,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+          ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(15.00)),
+            child: Container(
+              width: initialIndex == 1
+                  ? MediaQuery.of(context).size.width * .3
+                  : null,
+              color: initialIndex == 1 ? Colors.white : Colors.transparent,
+              child: IconButton(
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    initialIndex = 1;
+                  });
+                },
+                icon: initialIndex == 1
+                    ? const Icon(
+                        Icons.check_circle_outline,
+                        color: Colors.black,
+                        size: 35,
+                      )
+                    : const Icon(
+                        Icons.check_circle_outline,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+              ),
+            ),
           ),
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                initialIndex = 2;
-              });
-            },
-            icon: initialIndex == 2
-                ? const Icon(
-                    Icons.widgets_rounded,
-                    color: Colors.white,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.widgets_outlined,
-                    color: Colors.white,
-                    size: 35,
-                  ),
+          ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(15.00)),
+            child: Container(
+              width: initialIndex == 2
+                  ? MediaQuery.of(context).size.width * .3
+                  : null,
+              color: initialIndex == 2 ? Colors.white : Colors.transparent,
+              child: IconButton(
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    initialIndex = 2;
+                  });
+                },
+                icon: initialIndex == 2
+                    ? const Icon(
+                        Icons.widgets_rounded,
+                        color: Colors.black,
+                        size: 35,
+                      )
+                    : const Icon(
+                        Icons.widgets_outlined,
+                        color: Colors.white,
+                        size: 35,
+                      ),
+              ),
+            ),
           ),
         ],
       ),
