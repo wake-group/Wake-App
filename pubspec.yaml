@@ -18,6 +18,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.1
   flutter_svg:
+  provider:
+  android_alarm_manager_plus:
 
 dev_dependencies:
   flutter_test:
